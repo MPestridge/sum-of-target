@@ -1,12 +1,13 @@
 'use strict';
 
 let expect = require('chai').expect;
-let vowelCounter = require('../script.js');
+let twoNumSumFinder = require('../script.js');
 
-describe('Vowel Counter', () => {
-    it('should return the total count of vowels in a given string', () => {
-      let randoString = 'This is my random string.';
-      let count = vowelCounter(randoString);
-      expect(count).to.equal(5);
+describe('Two Number Sum Finder', () => {
+    it('should return the two numbers thats sum equals the target number', () => {
+      let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      let target = 15;
+      let solution = twoNumSumFinder(array, target);
+      expect(solution).to.eql([5, 10]);
     });
 });
